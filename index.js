@@ -2,6 +2,7 @@ var express = require('express');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const cors = require('cors');
+const config = require('./config/environment');
 
 var app = module.exports = express();
 
@@ -22,6 +23,6 @@ app.get('/', function (req, res) {
 
 
 if (!module.parent) {
-    app.listen(3000);
-    console.log(`Express started on port 3000`);
+    app.listen(config.port);
+    console.log(`Express started on port ${config.port}`);
 }
