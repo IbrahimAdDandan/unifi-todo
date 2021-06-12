@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "22503d6e-44be-4643-8738-7356113354e0",
+		"name": "ToDo unifi test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all for user by userId from mongo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/v2/todos/user/60c3bf32669a4be67584a345"
+			},
+			"response": []
+		},
+		{
+			"name": "get all fro user by userId from mysql",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/v1/todos/user/1"
+			},
+			"response": []
+		},
+		{
+			"name": "create new todo in mysql",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"UserId\": 1,\n    \"name\": \"todo1\",\n    \"desc\": \"todo desc2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/v1/todos"
+			},
+			"response": []
+		},
+		{
+			"name": "create new todo in mongo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": \"60c3bf32669a4be67584a345\",\n    \"name\": \"todo1\",\n    \"desc\": \"todo desc2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/v2/todos"
+			},
+			"response": []
+		},
+		{
+			"name": "get todo by it's id from mysql",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/v1/todos/2"
+			},
+			"response": []
+		},
+		{
+			"name": "get todo by it's id in mongo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/v2/todos/60c4ee54299caf8e5cd13d33"
+			},
+			"response": []
+		},
+		{
+			"name": "update todo in mysql",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n    \"UserId\": 1,\n    \"name\": \"todo1\",\n    \"desc\": \"todo new updated description\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/v1/todos/2"
+			},
+			"response": []
+		},
+		{
+			"name": "update todo in mongo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": \"60c3bf32669a4be67584a345\",\n    \"name\": \"todo1\",\n    \"desc\": \"todo new updated description\",\n    \"_id\": \"60c4ee54299caf8e5cd13d33\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/v2/todos/60c4ee54299caf8e5cd13d33"
+			},
+			"response": []
+		},
+		{
+			"name": "delete todo in mysql",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/api/v1/todos/2"
+			},
+			"response": []
+		},
+		{
+			"name": "delete todo from mongo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/api/v2/todos/60c4ee54299caf8e5cd13d33"
+			},
+			"response": []
+		},
+		{
+			"name": "get all created users in mysql",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/data-seed/user2"
+			},
+			"response": []
+		},
+		{
+			"name": "get all created users in mongo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/data-seed/user1",
+				"description": "just for test and to get the id"
+			},
+			"response": []
+		},
+		{
+			"name": "seed data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/data-seed/init"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaW5mbyI6eyJpZCI6MSwiZmlyc3RuYW1lIjoiZmlyc3QiLCJsYXN0bmFtZSI6Imxhc3QiLCJlbWFpbCI6InVzZXJAZG9tYWluLm1haWwiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicGFzc3dvcmQiOiJkZWxldGVkIGZvciBzZWN1cml0eSBwdXJwb3NlIiwiZGVsZXRlZCI6ZmFsc2UsImNyZWF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjEtMDYtMTFUMTk6NTc6MDMuMDAwWiJ9LCJpYXQiOjE2MjM1MTcxMTh9.UWg2ofNx_yx9fNCPmro1WJ_5WbMRvHLCiS3DtGEvJao"
+		}
+	}
+}
