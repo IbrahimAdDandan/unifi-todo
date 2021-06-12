@@ -17,6 +17,9 @@ app.use(bodyParser.urlencoded({
 }));
 
 
+require('./config/sequelize.config');
+require('./config/sequelize.config').testDBConnection();
+
 app.get('/', function (req, res) {
     res.send('Hello from root route.')
 });
