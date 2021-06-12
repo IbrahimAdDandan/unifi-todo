@@ -5,4 +5,7 @@ module.exports = {
     database1Password: 'MySQL_DB_PASS',
     database1Host: 'localhost',
     database1Dialect: 'mysql',
+    database2Host: '',
+    database2Password: '',
+    database2Name: ''
 };
