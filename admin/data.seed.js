@@ -3,7 +3,7 @@ require('../config/sequelize.config');
 const User1 = require('../user/models/user.model.mongo').User;
 const User2 = require('../user/models/user.model.sequelize');
 const ToDo = require('../to-do/models/todo.model.sequelize');
-const env = require('../config/environment');
+const env = require('../config/environment.prod');
 const bcrypt = require('bcryptjs');
 const logger = require('../config/logger.config');
 const mongoose = require('mongoose');

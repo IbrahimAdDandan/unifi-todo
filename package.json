@@ -31,6 +31,9 @@
     "helmet": "^4.6.0",
     "mongoose": "^5.12.13",
     "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
     "sequelize": "^6.6.2",
     "winston": "^3.3.3",
     "winston-daily-rotate-file": "^4.5.5"

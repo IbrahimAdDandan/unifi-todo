@@ -9,5 +9,6 @@ module.exports = {
     database2Password: 'MONGO_PASS',
     database2Name: 'MONGO_DB_NAME',
     defaultUserPass: 'change-me',
-    defaultUsername: 'user'
+    defaultUsername: 'user',
+    jwtSecret: 'jwtSecret'
 };
