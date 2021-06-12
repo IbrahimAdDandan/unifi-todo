@@ -1,0 +1,22 @@
+{
+  "name": "unifi-todo",
+  "version": "1.0.0",
+  "description": "Unifi todo test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IbrahimAdDandan/unifi-todo.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Ibrahim AdDandan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IbrahimAdDandan/unifi-todo/issues"
+  },
+  "homepage": "https://github.com/IbrahimAdDandan/unifi-todo#readme"
+}
