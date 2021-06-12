@@ -2,7 +2,7 @@ const TodoRepo = require('../repositories/todo.repo.sequelize');
 
 module.exports.create = async (req, res) => {
     try {
-        if(!req.body) {
+        if (!req.body) {
             res.status(400).json('todo is required!');
         }
         const result = await TodoRepo.create(req.body);
@@ -16,10 +16,10 @@ module.exports.create = async (req, res) => {
 module.exports.update = async (req, res) => {
     try {
         todo = req.body;
-        if(!todo) {
+        if (!todo) {
             res.status(400).json('todo is required!');
         }
-        if(!todo.id) {
+        if (!todo.id) {
             todo.id = req.params.id;
         }
         const result = await TodoRepo.update(todo);
@@ -32,7 +32,7 @@ module.exports.update = async (req, res) => {
 
 module.exports.delete = async (req, res) => {
     try {
-        if(!req.params.id) {
+        if (!req.params.id) {
             res.status(400).json('id is required!');
         }
         const result = await TodoRepo.delete(req.params.id);
@@ -45,7 +45,7 @@ module.exports.delete = async (req, res) => {
 
 module.exports.getOne = async (req, res) => {
     try {
-        if(!req.params.id) {
+        if (!req.params.id) {
             res.status(400).json('id is required!');
         }
         const result = await TodoRepo.getOne(req.params.id);
@@ -55,3 +55,14 @@ module.exports.getOne = async (req, res) => {
     }
 };
 
+module.exports.getbyUser = async (req, res) => {
+    try {
+        if (!req.params.userId) {
+            res.status(400).json('id is required!');
+        }
+        const result = await TodoRepo.getByUserId(req.params.userId);
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(500).json(error.message);
+    }
+};

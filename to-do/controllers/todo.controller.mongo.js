@@ -53,3 +53,16 @@ module.exports.getOne = async (req, res) => {
         res.status(500).json(error.message);
     }
 };
+
+module.exports.getbyUser = async (req, res) => {
+    try {
+        if(!req.params.userId) {
+            res.status(400).json('id is required!');
+        }
+        const result = await TodoRepo.getByUserId(req.params.userId);
+        res.status(200).json(result);
+    } catch (error) {
+        res.status(500).json(error.message);
+    }
+};
+

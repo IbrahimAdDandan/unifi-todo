@@ -41,3 +41,13 @@ module.exports.getOne = async (id) => {
         throw new Error('Can not get data now, please contact the developer');
     }
 };
+
+
+module.exports.getByUserId = async (id) => {
+    try {
+        return await ToDo.find({ user: id }).exec();
+    } catch (error) {
+        logger.error(error);
+        throw new Error('Can not get data now, please contact the developer');
+    }
+};

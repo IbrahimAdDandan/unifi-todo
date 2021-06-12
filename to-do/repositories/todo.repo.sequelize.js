@@ -47,3 +47,16 @@ module.exports.getOne = async (id) => {
         throw new Error('Can not get data now, please contact the developer');
     }
 };
+
+module.exports.getByUserId = async (id) => {
+    try {
+        return await ToDo.findAll({
+            where: {
+                UserId: id
+            }
+        });
+    } catch (error) {
+        logger.error(error.message);
+        throw new Error('Can not get data now, please contact the developer');
+    }
+};

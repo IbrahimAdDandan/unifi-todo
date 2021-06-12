@@ -13,4 +13,9 @@ router
     .put(toDoCtrl.update)
     .delete(toDoCtrl.delete);
 
+
+router
+    .route('/todos/user/:userId')
+    .get(toDoCtrl.getbyUser);
+
 module.exports = router;
