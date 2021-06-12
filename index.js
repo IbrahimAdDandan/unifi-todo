@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const cors = require('cors');
 const config = require('./config/environment');
+const todoRoutesSequelize = require('./to-do/routes/todo.route.sequelize');
 
 var app = module.exports = express();
 
@@ -19,6 +20,8 @@ app.use(bodyParser.urlencoded({
 
 require('./config/sequelize.config');
 require('./config/sequelize.config').testDBConnection();
+
+app.use('/api', todoRoutesSequelize);
 
 app.get('/', function (req, res) {
     res.send('Hello from root route.')
