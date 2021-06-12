@@ -27,6 +27,7 @@
     "express-bearer-token": "^2.4.0",
     "express-session": "^1.17.2",
     "helmet": "^4.6.0",
+    "mongoose": "^5.12.13",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2",
     "winston": "^3.3.3",

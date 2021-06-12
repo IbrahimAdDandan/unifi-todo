@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-
+require('./config/mongo.config');
 require('./config/sequelize.config');
 require('./config/sequelize.config').testDBConnection();
 

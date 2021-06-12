@@ -5,7 +5,7 @@ module.exports = {
     database1Password: 'MySQL_DB_PASS',
     database1Host: 'localhost',
     database1Dialect: 'mysql',
-    database2Host: '',
-    database2Password: '',
-    database2Name: ''
+    database2ClusterName: 'MONGO_CLUSTER_NAME',
+    database2Password: 'MONGO_PASS',
+    database2Name: 'MONGO_DB_NAME',
 };
