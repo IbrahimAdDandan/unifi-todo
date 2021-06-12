@@ -5,6 +5,10 @@ const Model = mongoose.model;
 
 const ToDoSchema = new Schema({
   _id: ObjectId,
+  user: {
+    type: ObjectId,
+    ref: 'User'
+  },
   name: String,
   desc: String,
   createdAt: {

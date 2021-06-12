@@ -5,6 +5,7 @@ const cors = require('cors');
 const config = require('./config/environment');
 const todoRoutesSequelize = require('./to-do/routes/todo.route.sequelize');
 const todoRoutesMongo = require('./to-do/routes/todo.route.mongo');
+const initRoutes = require('./admin/seed.data.route');
 
 var app = module.exports = express();
 
@@ -22,6 +23,7 @@ require('./config/mongo.config');
 require('./config/sequelize.config');
 require('./config/sequelize.config').testDBConnection();
 
+app.use('/data-seed', initRoutes);
 app.use('/api/v1', todoRoutesSequelize);
 app.use('/api/v2', todoRoutesMongo);
 
